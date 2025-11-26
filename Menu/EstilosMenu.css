@@ -1,0 +1,266 @@
+/* Tipografías exportadas*/
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap');
+
+/*----------------------------------Header-----------------------------------------*/
+/* Estilo general del header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: #f4f2e5; /* Fondo rosa claro tipo floral */
+  padding: 24px 48px;
+  font-family: 'Playfair Display', serif;
+  box-sizing: border-box;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+/* Logo */
+header > div {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* foto*/
+header div img {
+  height: 56px;
+  width: auto;
+}
+
+/* Navegación */
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 32px;
+  margin: 0;
+  padding: 0;
+}
+
+/*Sin cursor arriba*/
+nav ul li a {
+  text-decoration: none;
+  color: #4d3034; /* Vino */
+  font-weight: 500;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+}
+
+/*Con cursor arriba*/
+nav ul li a:hover {
+  color: #99a990; /* Verde al pasar el cursor */
+}
+
+/*-----------------------------------Banner----------------------------------------*/
+/* Area del banner principal */
+.banner {
+  background: url("./Imagenes/FondoBanner.jpeg") no-repeat center center;
+  background-size: cover;
+  text-align: center;
+  padding: 60px;
+  font-family: 'Cormorant Garamond', serif;
+  color: #fafad2; /* tono floral para todo el texto */
+  margin-top: 100px; /* ajusta según el alto real del header */
+
+}
+/*titulo del banner*/
+.banner h1 {
+  font-size: 3rem;
+  margin: 0.2em 0; /* reduce espacio entre títulos */
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+/*subtitulo del banner*/
+.banner h3 {
+  font-size: 1.4rem;
+  font-weight: 400;
+  font-style: italic;
+  margin-top: 0.5em;
+  color: #fafad2; 
+}
+
+/*-----------------------------------División----------------------------------------*/
+/*alinear la imagen y el divisor en general*/
+.division {
+  text-align: center;
+}
+
+.division img {
+  max-width: 100%;
+  height: auto;
+}
+
+/*-----------------------------------Menu----------------------------------------*/
+/* Sección general */
+.menu {
+    padding: 40px 20px;
+    background-color: #ffffff;
+    font-family: 'Cormorant Garamond', serif;
+    text-align: center;
+}
+
+/*titulo del menu*/
+.menu h2 {
+    text-align: center;
+    font-size: 3rem;
+    font-family: 'Cormorant Garamond', serif;
+    margin-bottom: 30px;
+    color: #99a990;
+}
+
+/* Contenedor adaptable */
+.contenedor-menu {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, auto));
+    gap: 25px;
+    justify-content: center;  
+}
+
+/* Tarjetas de platillos */
+.contenedor-menu article {
+    width: 240px;
+    background:#f2f2f2;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s ease;
+}
+
+/*animacion*/
+.contenedor-menu article:hover {
+    transform: translateY(-5px);;
+}
+
+/* Títulos */
+.contenedor-menu h4 {
+    font-size: 1.4rem;
+    color: #99a990;
+    min-height: 60px;  
+    display: flex;      
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+
+/* Imágenes */
+.contenedor-menu figure {
+    width: 100%;
+    height: 180px;
+    overflow: hidden;
+    border-radius: 10px;
+    margin: 0 0 15px 0;
+    flex-shrink: 0;
+}
+
+.contenedor-menu img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Descripción */
+.contenedor-menu p {
+    color: #5c4b43;
+    font-size: 0.95rem;
+    line-height: 1.4rem;
+    margin-bottom: 10px;
+}
+
+.contenedor-menu h4 {
+    margin-bottom: 10px;
+}
+
+.contenedor-menu p {
+    margin-bottom: 10px;
+}
+/* Precio */
+.precio {
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: #b35b36;
+    margin-top: auto; /* Baja el precio al final */
+}
+/*-----------------------------------Bebidas----------------------------------------*/
+/* Precios en estilo pastilla */
+.precios {
+    display: flex;
+    gap: 12px;
+    background: #99a990;
+    padding: 8px 14px;
+    border-radius: 25px;
+    box-shadow: 0 5px 12px rgba(0,0,0,0.10);
+    font-size: 0.95rem;
+    z-index: 2;
+    align-self: center;
+}
+
+.precios p {
+    margin: 0;
+    color: whitesmoke;
+}
+
+.precios span {
+    font-weight: bold;
+    color: white;
+}
+
+/*----------------------------------Footer----------------------------------------*/
+/* CONTENEDOR DEL FOOTER */
+#footer {
+    background: #f4f2e5;          /* un tono suave, ligero */
+    padding: 2.5rem 1.5rem;
+    margin-top: 3rem;
+    border-top: 1px solid #e2d4c8;
+    font-family: "Cormorant Garamond", serif;
+}
+
+/* CONTENIDO CENTRADO */
+.footer-contenido {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* NAV LISTA */
+#footer nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1rem;
+    display: flex;
+    justify-content: center;
+    gap: .7rem;
+    font-size: 1rem;
+    color: #6b4b3e;
+}
+
+#footer nav ul li {
+    font-weight: 500;
+}
+
+/* TEXTO GENERAL */
+#footer p {
+    margin: .3rem 0;
+    color: #6f5245;
+    font-size: .95rem;
+}
+
+/* LINKS */
+#footer a {
+    text-decoration: none;
+    color: #8a5a44;
+    font-weight: 500;
+    transition: color .2s ease;
+}
+
+#footer a:hover {
+    color: #b07b5e;
+}

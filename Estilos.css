@@ -1,0 +1,373 @@
+/* Tipografías exportadas*/
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap');
+
+/* Estilo general del header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: #f4f2e5; /* Fondo rosa claro tipo floral */
+  padding: 24px 48px;
+  font-family: 'Playfair Display', serif;
+  box-sizing: border-box;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+/* Logo */
+header > div {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* foto*/
+header div img {
+  height: 56px;
+  width: auto;
+}
+
+/* Navegación */
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 32px;
+  margin: 0;
+  padding: 0;
+}
+
+/*Sin cursor arriba*/
+nav ul li a {
+  text-decoration: none;
+  color: #4d3034; /* Vino */
+  font-weight: 500;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+}
+
+/*Con cursor arriba*/
+nav ul li a:hover {
+  color: #99a990; /* Verde al pasar el cursor */
+}
+/*--------------------------------Banner principal-----------------------------------------*/
+/* Sección principal con imagen de fondo */
+.hero {
+  position: relative;
+  background-image: url('./Home Page/Imagenes/Galeria.jpeg');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+}
+
+/* Capa oscura encima del fondo */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6); /* Nivel de oscuridad */
+  z-index: 1;
+}
+
+/* Contenido centrado encima del overlay */
+.hero-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+}
+
+/* Logo */
+.logo {
+  max-width: 320px;
+  height: auto;
+  filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.3));
+}
+
+/* Botones */
+.buttons {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/*Boton sin mouse arriba*/
+.btn {
+  padding: 12px 24px;
+  border-radius: 40px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  border: none;
+  background-color: #4d3034; 
+  color: white;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/*Boton con moause arriba*/
+.btn:hover {
+  background-color: #99a990; 
+  color: white;
+}
+/*----------------------------------------Carrusel---------------------------------------------*/
+/*Seccion del carrucel*/
+.carrusel {
+  overflow: hidden;
+  width: 100%;
+  padding: 32px 0;
+  background-color: #fff;
+}
+/*Movimiento del carrucel*/
+.carrusel-track {
+  display: flex;
+  gap: 24px;
+  animation: scroll 30s linear infinite;
+}
+/* Cada artículo */
+.carrusel-track article {
+  flex: 0 0 auto;
+  width: 280px;
+  background: #f9f9f9;
+  border-radius: 8px;
+  padding: 16px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+/*titulo de articulo */
+.carrusel-track article h3 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 500;
+}
+/*parrafo de articulo */
+.carrusel-track article p {
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 500;
+}
+/*imagen de articulo */
+.carrusel-track img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+/* Animación infinita */
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); } /* Se mueve la mitad porque duplicamos los items */
+}
+
+/*------------------------------------------Testimonios-------------------------------------------*/
+/*Zona de testimonios*/
+#testimonios {
+  padding: 64px 32px;
+  text-align: center;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 500;
+}
+
+/* Encabezado */
+#testimonios h2 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 500;
+  font-size: 2rem;
+  color: #4d3034; /* vino */
+  margin-bottom: 48px;
+  border-bottom: 4px solid #99a990; /* verde suave */
+  display: inline-block;
+  padding-bottom: 8px;
+}
+
+/* Contenedor de tarjetas */
+#testimonios > div:first-of-type {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  justify-content: center;
+}
+
+/* Tarjeta individual */
+#testimonios figure {
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  padding: 24px;
+  max-width: 320px;
+  flex: 0 0 auto;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+/*Animacion*/
+#testimonios figure:hover {
+  transform: translateY(-4px);
+}
+
+/* Banda verde arriba */
+#testimonios figure::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 10px;
+  background-color: #99a990;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+/* Texto del testimonio */
+#testimonios blockquote p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #333;
+  margin-bottom: 16px;
+}
+
+/* Autor y estrellas */
+#testimonios figcaption strong {
+  display: block;
+  font-weight: 600;
+  color: #4d3034;
+  margin-bottom: 4px;
+}
+
+#testimonios figcaption p {
+  font-size: 1.2rem;
+  color: #f5b301; /* dorado para estrellas */
+}
+
+/* Botón de ver más */
+#testimonios > div:last-of-type p {
+  margin-top: 32px;
+  font-weight: 500;
+  color: #4d3034;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+#testimonios > div:last-of-type p:hover {
+  color: #99a990;
+}
+
+/* 
+  Estilos para el botón "ver reseñas".
+  Se encarga de darle forma, sombra, espaciado y efectos de interacción 
+  para que luzca como un botón moderno y resaltado.
+*/
+.ver-resenas {
+  display: inline-block;
+  background-color: rgba(255, 255, 255, 0.95);
+  padding: 12px 24px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  align-items: center;
+}
+
+.ver-resenas p {
+  margin: 0;
+  font-weight: 600;
+  color: #4d3034; /* vino */
+  font-family: 'Quicksand', sans-serif;
+}
+
+/* Hover para darle vida */
+.ver-resenas:hover {
+  background-color: #f5e9c8; /* amarillo suave */
+  transform: translateY(-2px);
+}
+
+
+/*-----------------------------footer----------------------------------------*/
+/* Fondo floral y estilo general */
+footer {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding: 64px 32px;
+  color: #4d3034; /* vino */
+  text-align: center;
+  font-family: 'Quicksand', sans-serif;
+  position: relative;
+}
+
+/* Recuadro interno para contenido */
+.footer-contenido {
+  max-width: 600px;
+  margin: auto;
+  background-color:  #f4f2e5; /* blanco semitransparente */
+  padding: 32px;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* Título del footer */
+.footer-contenido h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.8rem;
+  margin-bottom: 16px;
+}
+
+/* Texto general */
+.footer-contenido p {
+  margin: 8px 0;
+  font-size: 1rem;
+}
+
+/*Datos personales*/
+.footer-contenido nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0;
+  background-color: transparent; /* o el color que uses */
+}
+
+/*Estilos para las listas*/
+.footer-contenido nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+.footer-contenido nav ul li {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.2rem;
+  color: #6b4c4c;
+  margin: 5px 0; /* espacio entre líneas */
+}
+
+/*-----------------------------imagen para la zona inferior----------------------------------------*/
+.zona-inferior {
+  background-image: url('./Home Page/Imagenes/footer.jpeg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: bottom center;
+}
+
+
+
+
+
+
+
+
+
+
+

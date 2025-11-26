@@ -1,0 +1,206 @@
+/* Tipografías exportadas*/
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap');
+
+/*----------------------------------Header-----------------------------------------*/
+/* Estilo general del header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: #f4f2e5; /* Fondo rosa claro tipo floral */
+  padding: 24px 48px;
+  font-family: 'Playfair Display', serif;
+  box-sizing: border-box;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+/* Logo */
+header > div {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* foto*/
+header div img {
+  height: 56px;
+  width: auto;
+}
+
+/* Navegación */
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 32px;
+  margin: 0;
+  padding: 0;
+}
+
+/*Sin cursor arriba*/
+nav ul li a {
+  text-decoration: none;
+  color: #4d3034; /* Vino */
+  font-weight: 500;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+}
+
+/*Con cursor arriba*/
+nav ul li a:hover {
+  color: #99a990; /* Verde al pasar el cursor */
+}
+/*-----------------------------------Banner----------------------------------------*/
+/* Banner principal refinado */
+.banner {
+  background: url("./Imagenes/Banner.jpeg") no-repeat center center;
+  background-size: cover;
+  text-align: center;
+  padding: 60px;
+  font-family: 'Cormorant Garamond', serif;
+  color: #fafad2; /* tono floral para todo el texto */
+  margin-top: 100px; /* ajusta según el alto real del header */
+
+}
+/*Titulo del banner*/
+.banner h1 {
+  font-size: 3rem;
+  margin: 0.2em 0; /* reduce espacio entre títulos */
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+/*Subtitulo del banner*/
+.banner h3 {
+  font-size: 1.4rem;
+  font-weight: 400;
+  font-style: italic;
+  margin-top: 0.5em;
+  color: #fafad2; 
+}
+
+/*-----------------------------------Galeria----------------------------------------*/
+/*Area de la galeria*/
+.galeria {
+    padding: 40px 20px;
+    background-color: #f5f5f5;
+}
+
+/*definir la "cuadricula"*/
+.grid {
+    display: flex;
+    gap: 10px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/*seccion de la mitad izq*/
+.izquieda {
+    display: flex;
+    gap: 10px;
+    flex: 2;
+}
+
+/*Estilos generales de las columnas y sus imagenes */
+.col {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex: 1;
+}
+
+.col img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    display: block;
+}
+
+/* Imágenes cuadradas - altura fija */
+.cuadrada {
+    aspect-ratio: 1/1;
+}
+
+/* Imágenes rectangulares verticales */
+.rect-alto {
+    aspect-ratio: 1/2.1;
+}
+
+/* Imágenes rectangulares horizontales */
+.rect-ancho {
+    aspect-ratio: 2/1;
+}
+
+/*----------------------------------Mensajito coqueton---------------------------------------*/
+.mensaje {
+    margin-bottom: 3 rem;
+}
+.mensaje h3{
+    font-size: 1.5rem;
+    font-style: italic;
+    color: #a08d85;
+    margin-bottom: 15px;
+    text-align: center;
+}
+.mensaje p{
+    font-size: 1 rem;
+    font-style: italic;
+    color: black;
+    margin-bottom: 15px;
+    text-align: center;
+}
+/*----------------------------------Footer----------------------------------------*/
+/* CONTENEDOR DEL FOOTER */
+#footer {
+    background: #f4f2e5;         
+    padding: 2.5rem 1.5rem;
+    margin-top: 3rem;
+    border-top: 1px solid #e2d4c8;
+    font-family: "Cormorant Garamond", serif;
+}
+
+/* CONTENIDO CENTRADO */
+.footer-contenido {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* NAV LISTA */
+#footer nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1rem;
+    display: flex;
+    justify-content: center;
+    gap: .7rem;
+    font-size: 1rem;
+    color: #6b4b3e;
+}
+
+#footer nav ul li {
+    font-weight: 500;
+}
+
+/* TEXTO GENERAL */
+#footer p {
+    margin: .3rem 0;
+    color: #6f5245;
+    font-size: .95rem;
+}
+
+/* LINKS */
+#footer a {
+    text-decoration: none;
+    color: #8a5a44;
+    font-weight: 500;
+    transition: color .2s ease;
+}
+
+#footer a:hover {
+    color: #b07b5e;
+}
